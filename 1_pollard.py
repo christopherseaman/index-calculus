@@ -19,32 +19,20 @@ def iter(triple):
     a = triple[1]
     b = triple[2]
     if   x % 3 == 0:
-        # print(0, x, a, b)
         x = (x * x) % q
         a = (a * 2) % q_order
         b = (b * 2) % q_order
-        # print(0, x, a, b)
     elif x % 3 == 1:
-        # print(1, x, a, b)
         x = (x * g) % q
         a = (a + 1) % q_order
-        # print(1, x, a, b)
     elif x % 3 == 2:
-        # print(2, x, a, b)
         x = (x * n) % q
         b = (b + 1) % q_order
-        # print(2, x, a, b)
     return [x, a, b]
 
 xab = [1, 0, 0]
 XAB = [1, 0, 0]
 i = mpz(0)
-
-# print(xab)
-# xab = iter(xab)
-# print(xab)
-# xab = iter(xab)
-# print(xab)
 
 print(str(i), str(xab[0]), str(xab[1]), str(xab[2]), str(XAB[0]), str(XAB[1]), str(XAB[2]))
 while i < q_order:
